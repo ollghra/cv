@@ -1,4 +1,4 @@
-\documentclass[margin,centered,10pt]{res}
+\documentclass[sectionsleft,centered,10pt]{res}
 
 \usepackage{newcent} 
 \usepackage{wasysym}
@@ -7,8 +7,12 @@
 \let\oldhref\href
 \renewcommand{\href}[2]{\oldhref{#1}{\textbf{#2}}}
 
-\setlength{\textwidth}{5.5in} % Text width of the document
-
+%\setlength{\textwidth}{8in} % Text width of the document
+\RequirePackage[a4paper, margin=0.7in]{geometry}
+\setlength{\resumewidth}{7in}
+\newsectionwidth{1.2in}
+%\hoffset=1in
+%\resumewidth=6in
 \let\sep\ataribox
 
 \begin{document}
@@ -21,8 +25,8 @@
 				\bigskip
 				{\hrule width\resumewidth height 1pt}
 				\medskip
-					tiarnachreidy@gmail.com
-					\hfill\sep\hfill Clonbarron, Kildalkey, Co. Meath, Ireland
+					tiarnach.oriada@ucdconnect.ie
+					\hfill\sep\hfill \href{https://github.com/TOR-}{github.com/TOR-}
 					\hfill\sep\hfill (+353)\,89\,257\,0056
 				\medskip
 				{\hrule width\resumewidth height 1pt}
@@ -36,65 +40,75 @@
 
 \section{EDUCATION}
 
-{\sl \textbf{University College Dublin}}\hfill 2016-2020\\
-{\sl BEngSc Electronic Engineering}\\
-Current GPA 3.9/4.2, First Class Honours\\
-On track for an ME in Computer Engineering in UCD after graduation.\\\\
+{\sl \textbf{University College Dublin}}\hfill 2016-2021\\
+{\sl BEng Electronic Engineering}\\
+Final GPA 3.74/4.2, First Class Honours\\\\
 {\sl \textbf{École polytechnique fédérale de Lausanne}}\hfill 2018-2019\\
-{\sl Erasmus Exchange Electronic Engineering}\\
-Designed systems with VHDL and C++. Studied electromagnetics and circuit analysis.\\
-Speak French to the CEFR level B2 (Upper Intermediate).
-
+{\sl Erasmus Exchange in Electronic Engineering}\\
+%Designed systems with VHDL and C++. Studied digital system design.\\
 
 \section{EXPERIENCE}
-{\sl\textbf{Spanish Point Technologies} \hfill June-August 2017-2019}\\
-\emph{QA Intern, Developer}
+{\sl\textbf{EOFIS} \hspace{0.5cm}\oldhref{https://eofis.ie}{eofis.ie}\hfill May 2021-Present}\\
+\emph{CTO, Co-Founder}
+\begin{itemize}
+	\item Responsible for technical aspects of company's success.
+	\item Development of VueJS frontend and Python and AWS backend.
+	\item As thesis implemented prototype cloud-based automated flashcard generation system from online sources.
+\end{itemize}
+{\sl\textbf{Irish Photonic Integration Centre , Tyndall National Inst.} \hfill June-August 2020}\\
+\emph{Summer Bursary Student}
+\begin{itemize}
+	\item Designed and implemented photon time of flight simulation software.
+	\item Collaborated with rest of biophotonics research team.
+\end{itemize}
+{\sl\textbf{Spanish Point Technologies} \hfill June-August 2017,2018; March-August 2019}\\
+\emph{Developer, QA Intern}
 \begin{itemize}
 	\item Developing applications with C\#, JavaScript, NodeJs, Python and SQL.
 	\item Developing post-deployment tests for React and REST web application.
 	\item Coordinated testing of several long-running projects.
 \end{itemize}
-{\sl\textbf{Programming the Future} \hfill January-June 2018}\\
-\emph{Instructor \& Co-Founder}
-\begin{itemize}
-	\item Weekly Scratch, HTML and JavaScript programming class for groups of 15 children in 3\textsuperscript{rd} to 6\textsuperscript{th} classes.
-	\item Wrote lesson plans, gave individual feedback on projects.
-\end{itemize}
 
-\section{PROJECTS }
-\href{http://bit.ly/LLProtocol}{bit.ly/LLProtocol} a link layer protocol performing reliable transmission over a faulty physical link; detects errors and ensures eventual receipt of data. Designed with a REST-like api and developed in a team of four as a class project in UCD.\\
+\section{PROJECTS}
+\href{http://bit.ly/SPICEBAGsim}{bit.ly/SPICEBAGsim} a spice-like circuit simulator and gui in Python and FORTRAN.\\
 \href{http://bit.ly/Fyftem}{bit.ly/Fyftem} a Forth interpreter, written in x86\_64 assembler.\\
 \href{http://bit.ly/ChucklesOS}{bit.ly/ChucklesOS} the Chuckles Operating System. x86 single tasking operating system written in C and developed using GNU tools on Linux.\\
+\href{http://bit.ly/LLProtocol}{bit.ly/LLProtocol} a link layer protocol performing reliable transmission over a faulty physical link; detects errors and ensures eventual receipt of data. Designed with a REST-like api and developed in a team of four as a class project in UCD.\\
 \href{http://bit.ly/DomotiqueSimulation}{bit.ly/DomotiqueSimulation} a C++ simulation of a home automation system.\\
 
 \section{SKILLS}
-Captain of the UCD Judo club for the 2019-2020 year.\\
-Experience with small to medium projects in C, C++, Intel x86\_64 assembly, VHDL, Python, \LaTeX\ and MATLAB.\\
-Git source control software.\\
-%Also Forth, C\#, R, MATLAB, MS SQL, Javascript, CSS and HTML.\\
-Experience maintaining and developing on my personal Linux systems.
+Captain of the UCD Judo club for the 2019-2020 year. Current PRO.\\
+Experience with small to medium projects in Python, C, C++, Intel x86\_64 assembly, VHDL, and MATLAB.\\
+% Below line is filler
+Also Forth, C\#, R, MS SQL, Javascript, CSS and HTML.\\
+Git source control software, GNU development tools.\\
+Experience maintaining and developing personal and server Linux systems.\\
+Speak French to the CEFR level B2 (Upper Intermediate) and have a working proficiency in Italian.
 \section{INTERESTS}
-Judo, Brazilian jiu-jitsu, rugby; traditional and classical flute, tin whistle and guitar; Crusader Kings II and the Total War series.
+Forth and Factor; applications of deep learning; Judo, BJJ; flute, tin whistle and guitar.
+
+\if{0}
 \section{REFERENCES}
 \makebox[\textwidth]{
 	\small
-	\parbox[t]{0.35\textwidth}{
+	\parbox[t]{0.3\textwidth}{
 		John Corley\\
 		(+353)\,1\,652\,2000\\
 		%+353 86 837 8244\\
-		\emph{CTO, Spanish Point Enterprises}\\
+		\emph{CTO,\\Spanish Point Enterprises}\\
 		East Pt Business Park, \\Clontarf, Dublin, Ireland
 	}\hfill
-	\parbox[t]{0.3\textwidth}{
-		Paul O’Donnell\\
-		(+353)\,86\,600\,3036\\
-		\emph{CPSMA Legal Advisor}\\
-		Slane, Co. Meath, Ireland
+	\parbox[t]{0.4\textwidth}{
+		Sanathana Konugolu\\
+		%(+353)\,86\,600\,3036\\
+		sanathana.konugolu@tyndall.ie\\
+		\emph{Postdoctoral Researcher,\\
+			Tyndall\\CEO, BioPixS}\\
+		Cork, Ireland
 	}\hfill
-	\parbox[t]{0.36\textwidth}{
+	\parbox[t]{0.3\textwidth}{
 	Brian Mulkeen\\
-	%(+353)\,86\,600\,3036\\
-	(+353)\,1\,716\,1926\\
+	%(+353)\,1\,716\,1926\\
 	brian.mulkeen@ucd.ie\\
 	\emph{Lecturer/Assistant Professor}\\
 	School of Electrical \\
@@ -102,12 +116,6 @@ Judo, Brazilian jiu-jitsu, rugby; traditional and classical flute, tin whistle a
 	UCD, Belfield, Dublin 4
 	}
 }
-                      
-                    
-
-          
-        
-
-
+\fi
 \end{resume}
 \end{document}

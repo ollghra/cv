@@ -40,7 +40,7 @@
 %
 %   overlapped	the section titles overlap the body text (default)
 %
-%   margin	the section titles are to the left of the body text
+%   sectionsleft	the section titles are to the left of the body text
 %		
 %   11pt	use 11 point fonts instead of 10 point fonts
 %
@@ -185,17 +185,17 @@
 %\DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 %\DeclareOption{12pt}{\renewcommand\@ptsize{2}}
 
-\PassOptionsToClass{11pt,12pt}{article}
+\PassOptionsToClass{10pt,11pt,12pt}{article}
 \LoadClassWithOptions{article}
 
 \newif\if@line
-\newif\if@margin
+\newif\if@sectionsleft
 
 \DeclareOption{line}{\@linetrue}
 \DeclareOption{centered}{\@linefalse}
 
-\DeclareOption{margin}{\@margintrue}
-\DeclareOption{overlapped}{\@marginfalse}
+\DeclareOption{sectionsleft}{\@sectionslefttrue}
+\DeclareOption{overlapped}{\@sectionsleftfalse}
 
 \ExecuteOptions{overlapped,centered}
 \ProcessOptions\relax
@@ -280,7 +280,7 @@
 \newskip\sectionskip
 \newdimen\resumewidth
 
-\resumewidth=16.5cm
+\resumewidth=17cm
 \sectionskip=3ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
@@ -442,7 +442,7 @@
 \let\@@section\relax
 \def\ds@overlapped{\ifx\@@section\relax\newsectionwidth{0.5in}\let
   \@@section\unboxed@sectiontitle\fi}
-\def\ds@margin{\ifx\@@section\relax\newsectionwidth{1.3in}\let
+\def\ds@sectionsleft{\ifx\@@section\relax\newsectionwidth{1.3in}\let
   \@@section\boxed@sectiontitle\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -460,7 +460,7 @@
 %\input article.sty
 
 \if@line\ds@line\else\ds@centered\fi
-\if@margin\ds@margin\else\ds@overlapped\fi
+\if@sectionsleft\ds@sectionsleft\else\ds@overlapped\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
