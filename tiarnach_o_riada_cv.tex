@@ -2,13 +2,15 @@
 
 \usepackage{newcent} 
 \usepackage{wasysym}
+\usepackage{fontawesome5}
 
 \usepackage[hidelinks,urlcolor=black,colorlinks=true]{hyperref}
 \let\oldhref\href
 \renewcommand{\href}[2]{\oldhref{#1}{\textbf{#2}}}
 
 %\setlength{\textwidth}{8in} % Text width of the document
-\RequirePackage[a4paper, margin=0.7in]{geometry}
+\usepackage[a4paper, margin=0.7in]{geometry}
+\usepackage{graphicx}
 \setlength{\resumewidth}{7in}
 \newsectionwidth{1.2in}
 %\hoffset=1in
@@ -20,16 +22,18 @@
 \moveleft\hoffset\vbox{\centering\makebox[\resumewidth][c]{
 			\parbox{\resumewidth}{
 				\centering
-				\huge\textbf Tiarnach \'O Riada
-				\normalsize \\
+				\huge\textbf Tiarnach \'O Riada\\
+				\small
 				\bigskip
-				{\hrule width\resumewidth height 1pt}
+				{\normalsize\hrule width\resumewidth height 1pt}
 				\medskip
-					tiarnach.oriada@ucdconnect.ie
-					\hfill\sep\hfill \href{https://github.com/ollghra}{github.com/ollghra}
-					\hfill\sep\hfill (+353)\,89\,257\,0056
+					\href{mailto://tiarnach.oriada@ucdconnect.ie}{\faIcon{envelope} tiarnach.oriada@ucdconnect.ie}
+					\hfill\sep\hfill \href{https://github.com/ollghra}{\faIcon{github}   ollghra}
+					\hfill\sep\hfill
+					\href{https://www.linkedin.com/in/tiarnachreidy/}{\faIcon{linkedin} tiarnachreidy}
+					\hfill\sep\hfill \href{tel:+353892570056}{ \faIcon{phone-alt} (+353)\,89\,257\,0056}
 				\medskip
-				{\hrule width\resumewidth height 1pt}
+				{\normalsize\hrule width\resumewidth height 1pt}
 				}
 		}}
 
@@ -38,17 +42,8 @@
 
 \begin{resume}
 
-\section{EDUCATION}
-
-{\sl \textbf{University College Dublin}}\hfill 2016-2021\\
-{\sl BEng Electronic Engineering}\\
-Final GPA 3.74/4.2, First Class Honours\\\\
-{\sl \textbf{École polytechnique fédérale de Lausanne}}\hfill 2018-2019\\
-{\sl Erasmus Exchange in Electronic Engineering}\\
-%Designed systems with VHDL and C++. Studied digital system design.\\
-
 \section{EXPERIENCE}
-{\sl\textbf{EOFIS} \hspace{0.5cm}\oldhref{https://eofis.ie}{eofis.ie}\hfill May 2021-Present}\\
+{\sl\textbf{EOFIS} \hspace{0.5cm}{\upshape\href{https://eofis.ie}{{\parbox{1em}{\includegraphics[height=1.2em]{logo-256.grey}}} eofis.ie}}\hfill May 2021-Present}\\
 \emph{CTO, Co-Founder}
 \begin{itemize}
 	\item Responsible for technical aspects of company's success.
@@ -69,11 +64,20 @@ Final GPA 3.74/4.2, First Class Honours\\\\
 	\item Coordinated testing of several long-running projects.
 \end{itemize}
 
+
+\section{EDUCATION}
+
+{\sl \textbf{University College Dublin}, Ireland}\hfill 2016-2021\\
+{\sl BEng Electronic Engineering}\\
+Final GPA 3.74/4.2, First Class Honours\\
+Exchange 2018-2019 {\sl École polytechnique fédérale de Lausanne}, Switzerland\\
+%Designed systems with VHDL and C++. Studied digital system design.\\
+
 \section{PROJECTS}
-\href{http://bit.ly/SPICEBAGsim}{bit.ly/SPICEBAGsim} a spice-like circuit simulator and gui in Python and FORTRAN.\\
-\href{http://bit.ly/FYFTEM}{bit.ly/FYFTEM} a Forth interpreter, written in x86\_64 assembler.\\
-\href{https://bit.ly/TheChuckles}{bit.ly/TheChuckles} the Chuckles Operating System. x86 single tasking operating system written in C and developed using GNU tools on Linux.\\
-\href{http://bit.ly/DomotiqueSimulation}{bit.ly/DomotiqueSimulation} a C++ simulation of a home automation system.\\
+\href{http://bit.ly/SPICEBAGsim}{\faIcon{git-alt} bit.ly/SPICEBAGsim} a spice-like circuit simulator and gui in Python and FORTRAN.\\
+\href{http://bit.ly/FYFTEM}{\faIcon{git-alt} bit.ly/FYFTEM} a Forth interpreter, written in x86\_64 assembler.\\
+\href{https://bit.ly/TheChuckles}{\faIcon{git-alt} bit.ly/TheChuckles} the Chuckles Operating System. x86 single tasking operating system written in C and developed using GNU tools on Linux.\\
+\href{http://bit.ly/DomotiqueSimulation}{\faIcon{git-alt} bit.ly/DomotiqueSimulation} a C++ simulation of a home automation system.\\
 \textbf{UBWB} A link layer protocol performing reliable transmission over a faulty physical link; detects errors and ensures eventual receipt of data. Designed with a REST-like api and developed in a team of four as a class project in UCD.\\
 
 \section{SKILLS}
